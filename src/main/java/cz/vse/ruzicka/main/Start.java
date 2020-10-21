@@ -3,7 +3,8 @@
 package cz.vse.ruzicka.main;
 
 
-import com.sun.xml.internal.xsom.impl.ListSimpleTypeImpl;
+//import com.sun.xml.internal.xsom.impl.ListSimpleTypeImpl;
+import cz.vse.ruzicka.MainController;
 import cz.vse.ruzicka.logika.Hra;
 import cz.vse.ruzicka.logika.IHra;
 import cz.vse.ruzicka.uiText.TextoveRozhrani;
@@ -16,6 +17,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.awt.*;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 
@@ -33,6 +35,7 @@ public class Start extends Application
      *
      * @param args Parametry příkazového řádku
      */
+
     public static void main(String[] args)
     {
         List<String> vstup = Arrays.asList(args);
@@ -43,19 +46,19 @@ public class Start extends Application
             ui.hraj();
         } else {
             launch();
+        }
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         System.out.println("Startuji");
-        primaryStage.setTitle("Karlkulka");
+        primaryStage.setTitle("Karkulka");
         primaryStage.setFullScreen(true);
         primaryStage.show();
 
         FXMLLoader loader = new FXMLLoader();
-        imputStream stream = getClass().getClassLoader().getResourceAsStream("scene.fxml");
+        InputStream stream = getClass().getClassLoader().getResourceAsStream("scene.fxml");
         Parent root = loader.load(stream);
-
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

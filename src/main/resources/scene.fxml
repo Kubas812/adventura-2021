@@ -10,7 +10,7 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="cz.vse.ruzicka.MainController"
             prefHeight="400.0" prefWidth="600.0">
-    <Label fx:id="Label A">A</Label>
-    <Label fx:id="Label B">B</Label>
-    <Label fx:id="Label C">C</Label>
+    <Label fx:id="labelA">A</Label>
+    <Label fx:id="labelB">B</Label>
+    <Label fx:id="labelC">C</Label>
 </AnchorPane>
